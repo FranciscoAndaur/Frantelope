@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+teachers  <- classrooms <- assignment
+
+user -< posts >- tags

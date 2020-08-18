@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :posts
-  resources :tags
   resources :authors
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/authors", to: "authors#index"
+  get "/authors/:id", to: "authors#show"
+  get "/tags", to: "tags#index"
+  get "/tags/:id", to: "tags#show"
+  get "/posts", to: "posts#index"
+  get "/posts/:id", to: "posts#show"
+
 end
