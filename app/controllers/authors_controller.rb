@@ -9,6 +9,15 @@ class AuthorsController < ApplicationController
         render json: @author
     end
 
+    def login
+        @author = Author.find_by(username: params[:usernameFromFrontEnd])
+        if @author
+            render json: @author 
+        else
+            render json: {error: "No author with that name exists"}
+        end
+    end
+
     # def create
     #     @author = Author.create(author_params)
     #     render json: @author

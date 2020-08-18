@@ -1,5 +1,5 @@
 class AuthorSerializer < ActiveModel::Serializer
-  attributes :id, :username, :methods
+  attributes :id, :username
   
   has_many :posts
   
