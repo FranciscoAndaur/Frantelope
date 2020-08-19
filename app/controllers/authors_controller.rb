@@ -18,17 +18,14 @@ class AuthorsController < ApplicationController
         end
     end
 
-    # def create
-    #     @author = Author.create(author_params)
-    #     render json: @author
-    # end
-
-
-    # def update
-    #     @author = Author.find(params[:id])
-    #     @author.update(author_params)
-    #     render json: @author
-    # end
+    def create
+        @author = Author.new(username: params[:usernameFromFrontEnd])
+        if @author.save
+          render json: @author, status: :accepted
+        else
+          render json: { errors: @author.errors.full_messages }, status: :unprocessible_entity
+        end
+      end
 
     # def destroy
     #     @author = Author.find(params[:id])

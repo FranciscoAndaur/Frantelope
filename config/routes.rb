@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/authors/:id", to: "authors#show"
   get "/authors/login", to: "authors#login"
   post "/authors/login", to: "authors#login"
+  post '/authors/signup', to: "authors#create"
   get "/tags", to: "tags#index"
   get "/tags/:id", to: "tags#show"
   get "/posts", to: "posts#index"
