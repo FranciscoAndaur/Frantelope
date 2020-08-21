@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 2020_08_17_193343) do
 
   create_table "authors", force: :cascade do |t|
     t.string "username"
+    t.string "bio"
+    t.string "avatar_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
